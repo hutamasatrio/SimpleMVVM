@@ -75,7 +75,7 @@
                             android:id="@+id/image_user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_person"/>
+                            android:src="@drawable/ic_person_24dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
                             android:id="@+id/image_phone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_person"/>
+                            android:src="@drawable/ic_call_24dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -104,11 +104,80 @@
                             android:layout_toEndOf="@+id/image_phone"
                             android:text="@{peopleDetailViewModel.userName}"/>
                     </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium">
+                        <ImageView
+                            android:id="@+id/image_mail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_email_24dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="14dp"
+                            android:layout_toEndOf="@+id/image_mail"
+                            android:text="@{peopleDetailViewModel.userName}"/>
+                    </RelativeLayout>
                     
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                android:contentPaddingBottom="16dp"
+                android:contentPaddingLeft="16dp"
+                android:contentPaddingRight="16dp"
+                android:contentPaddingTop="16dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/image_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_whatshot_24dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="14dp"
+                            android:layout_toEndOf="@+id/image_gender"
+                            android:text="@{peopleDedatilViewModel.address"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                
+            </android.support.v7.widget.CardView>
+
+            
         </LinearLayout>
         
     </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab_star"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_thumb_up_24dp"
+        app:fabSize="normal"/>
     
 </android.support.design.widget.CoordinatorLayout>
